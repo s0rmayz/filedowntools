@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filedowntools"
+version = "0.2.1"
+authors = [
+  { name="s0rmayz", email="2430545310@qq.com" },
+]
+description = "It is used to download files individually or in batches and store them in a specific location."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'requests', 
+]
+
+[project.urls]
+Homepage = "https://github.com/s0rmayz/filedowntools"
+Issues = "https://github.com/s0rmayz/filedowntools/issues"

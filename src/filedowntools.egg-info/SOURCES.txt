@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/filedowntools/__init__.py
+src/filedowntools/download.py
+src/filedowntools/errors.py
+src/filedowntools.egg-info/PKG-INFO
+src/filedowntools.egg-info/SOURCES.txt
+src/filedowntools.egg-info/dependency_links.txt
+src/filedowntools.egg-info/requires.txt
+src/filedowntools.egg-info/top_level.txt
