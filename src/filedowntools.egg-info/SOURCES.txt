@@ -5,6 +5,7 @@ src/filedowntools/__init__.py
 src/filedowntools/__main__.py
 src/filedowntools/download.py
 src/filedowntools/errors.py
+src/filedowntools/user_agents.py
 src/filedowntools.egg-info/PKG-INFO
 src/filedowntools.egg-info/SOURCES.txt
 src/filedowntools.egg-info/dependency_links.txt

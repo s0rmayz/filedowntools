@@ -9,8 +9,6 @@ import requests
 import os.path
 from .errors import *
 
-__all__ = ['download', 'large_download', 'downloads']
-
 def _raise_error(*args):
     raise DownloadError(*args) from None
 
@@ -30,8 +28,11 @@ def _split(file: str):
 class download:
     """Download a small file."""
     @_except_exceptions
-    def __init__(self, url):
-        self.res = requests.get(url)
+    def __init__(self, url, headers=None):
+        if not headers:
+            self.res = requests.get(url)
+        else:
+            self.res = requests.get(url, headers=headers)
         self.filename = os.path.split(url)[1]
 
     @_except_exceptions
@@ -46,8 +47,11 @@ class download:
 class large_download(download):
     """Download large files in chunks."""
     @_except_exceptions
-    def __init__(self, url):
-        self.res = requests.get(url, stream=True)
+    def __init__(self, url, headers=None):
+        if not headers:
+            self.res = requests.get(url, stream=True)
+        else:
+            self.res = requests.get(url, stream=True, headers=headers)
         self.filename = os.path.split(url)[1]
 
     @_except_exceptions
@@ -58,10 +62,13 @@ class large_download(download):
                     f.write(chunk)
 
 class downloads(download):
-    """Download files."""
+    """Download multiple files."""
     @_except_exceptions
-    def __init__(self, *urls):
-        self.resources = [requests.get(res) for res in urls]
+    def __init__(self, *urls, headers=None):
+        if not headers:
+            self.resources = [requests.get(res) for res in urls]
+        else:
+            self.resources = [requests.get(res, headers=headers) for res in urls]
         self.filenames = [os.path.split(url)[1] for url in urls]
 
     @_except_exceptions

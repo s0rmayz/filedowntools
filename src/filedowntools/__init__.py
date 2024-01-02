@@ -20,8 +20,20 @@ You can get the information too:
     >>> image.stat()[0]
     200
 
+You can also use the sample User Agents in headers: (use ua())
+    >>> from filedowntools import ua
+    >>> my_ua = ua.mac_cha
+    >>> my_ua
+    Mozilla/5.0(Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML like Gecko) Chrome/109.0.0.0 Safari/537.36
+    >>> image = download('https://www.python.org/static/img/python-logo@2x.png', 
+            headers={'User-Agent': my_ua})
+    >>> image.save('D:\\downloads\\')
+
 """ 
 
 from .download import *
+from .user_agents import *
 
-__version__ = '0.3.0'
+__all__ = ['download', 'large_download', 'downloads', 'ua']
+
+__version__ = '0.5.1'

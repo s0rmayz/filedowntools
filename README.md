@@ -1,4 +1,4 @@
-# _filedowntools_ library-v0.3.0
+# _filedowntools_ library-v0.5.1
 #### * __It is used to download files individually or in batches and store them in a specific location.__ 
 
 ## Installation
@@ -28,6 +28,17 @@ You can get the information with ***`file.stat()`*** too:
 ```
 >>> image.stat()[0] # Status code
 200
+```
+
+You can also use the sample User Agents in headers: (use __`ua()`__)
+```
+>>> from filedowntools import ua
+>>> my_ua = ua.mac_cha
+>>> my_ua
+Mozilla/5.0(Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML like Gecko) Chrome/109.0.0.0 Safari/537.36
+>>> image = download('https://www.python.org/static/img/python-logo@2x.png', 
+        headers={'User-Agent': my_ua})
+>>> image.save('D:\\downloads\\')
 ```
 
 ## Contact
