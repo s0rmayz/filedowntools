@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "filedowntools"
-version = "0.2.1"
+version = "0.3.0"
 authors = [
   { name="s0rmayz", email="2430545310@qq.com" },
 ]

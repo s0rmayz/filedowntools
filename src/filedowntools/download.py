@@ -66,4 +66,4 @@ class downloads(download):
     def save(self, location):
         for index, res in enumerate(self.resources):
             with open(os.path.join(location, _split(self.filenames[index])), 'wb') as f:
-                f.write(self.res.content)
+                f.write(res.content)

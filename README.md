@@ -1,4 +1,4 @@
-# _filedowntools_ library-v0.2.1
+# _filedowntools_ library-v0.3.0
 #### * __It is used to download files individually or in batches and store them in a specific location.__ 
 
 ## Installation
