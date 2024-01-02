@@ -9,6 +9,8 @@ import requests
 import os.path
 from .errors import *
 
+__all__ = ['download', 'large_download', 'downloads']
+
 def _raise_error(*args):
     raise DownloadError(*args) from None
 
