@@ -2,6 +2,7 @@ LICENSE
 README.md
 pyproject.toml
 src/filedowntools/__init__.py
+src/filedowntools/__main__.py
 src/filedowntools/download.py
 src/filedowntools/errors.py
 src/filedowntools.egg-info/PKG-INFO
